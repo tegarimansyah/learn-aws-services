@@ -38,3 +38,18 @@ hide: false
 src: ./pages/3.database/index.md
 hide: false
 ---
+
+---
+src: ./pages/4.security/index.md
+hide: false
+---
+
+---
+src: ./pages/5.autoscaling-and-monitoring/index.md
+hide: false
+---
+
+---
+src: ./pages/6.best-practice/index.md
+hide: false
+---

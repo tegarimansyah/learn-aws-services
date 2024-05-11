@@ -7,7 +7,7 @@ background: ./assets/background.jpg
 
 ---
 
-# AWS Popular Database Options (1/2)
+# AWS Popular Managed Database Services (1/2)
 
 https://aws.amazon.com/products/database/
 
@@ -20,7 +20,7 @@ https://aws.amazon.com/products/database/
 
 ---
 
-# AWS Popular Database Options (2/2)
+# AWS Popular Managed Database Services (2/2)
 
 https://aws.amazon.com/products/database/
 
@@ -60,7 +60,7 @@ Instead of installing in the same server with our app?
 layout: center
 ---
 
-# Create RDS Postgres
+# Create RDS PostgreSQL and RDS Aurora PostgreSQL
 
 Then access them from EC2
 
@@ -71,3 +71,11 @@ layout: center
 # Create ElastiCache for Redis
 
 Then access them from EC2
+
+---
+layout: center
+---
+
+# Create and Connect to Serverless Database
+
+Using DynamoDB 
