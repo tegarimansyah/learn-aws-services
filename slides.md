@@ -53,3 +53,10 @@ hide: false
 src: ./pages/6.best-practice/index.md
 hide: false
 ---
+
+---
+layout: cover
+background: ./assets/background.jpg
+---
+
+# Thank You
