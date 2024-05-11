@@ -33,3 +33,8 @@ hide: false
 src: ./pages/2.storage/index.md
 hide: false
 ---
+
+---
+src: ./pages/3.database/index.md
+hide: false
+---
