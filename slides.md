@@ -23,3 +23,13 @@ hide: false
 src: ./pages/1.compute/index.md
 hide: false
 ---
+
+---
+src: ./pages/1.compute/bonus-app-deployment-with-docker.md
+hide: false
+---
+
+---
+src: ./pages/2.storage/index.md
+hide: false
+---
