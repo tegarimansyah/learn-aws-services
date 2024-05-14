@@ -2,7 +2,7 @@
 theme: default
 background: ./assets/background.jpg
 
-title: Intro to Astro Web Framework
+title: Intro to Amazon Web Service - Universitas Nusa Putra 
 class: text-center
 highlighter: shiki
 drawings:
