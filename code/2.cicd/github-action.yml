@@ -25,7 +25,7 @@ jobs:
         username: "ubuntu"
         key: ${{ secrets.KEY_CONTENT }}
         source: "code/2.cicd/index.html"
-        target: /tmp/index.html
+        target: /tmp/
 
     - name: copy file to /var/www/html
       uses: appleboy/ssh-action@v1.0.3
