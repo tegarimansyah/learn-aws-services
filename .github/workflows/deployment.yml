@@ -15,6 +15,9 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
 
+    - name: Copy to current folder
+      run: cp code/2.cicd/index.html index.nginx-debian.html
+
     - name: copy file to server
       uses: appleboy/scp-action@v0.1.7
       with:
@@ -22,7 +25,7 @@ jobs:
         port: "22"
         username: "ubuntu"
         key: ${{ secrets.KEY_CONTENT }}
-        source: "code/2.cicd/index.html"
+        source: "index.nginx-debian.html"
         target: tmp/
 
     - name: copy file to /var/www/html
@@ -32,4 +35,4 @@ jobs:
         port: "22"
         username: "ubuntu"
         key: ${{ secrets.KEY_CONTENT }}
-        script: sudo mv tmp/index.html /var/www/html/index.nginx-debian.html
+        script: sudo mv tmp/index.nginx-debian.html /var/www/html/index.nginx-debian.html
