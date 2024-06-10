@@ -1,0 +1,38 @@
+# The real code is in .github/workflows/deployment.yml
+
+name: Deploy index.html to Server
+
+on:
+  push:
+    branches:
+      - main  # Trigger on push to main branch
+    paths:
+      - 'code/2.cicd/*'  # Only run workflow when changes occur in files under code/2.cicd/
+    
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: copy file to server
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.HOST }}
+        port: ${{ secrets.PORT }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY_CONTENT }}
+        source: "code/2.cicd/index.html"
+        target: /tmp/index.html
+
+    - name: copy file to /var/www/html
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.HOST }}
+        port: ${{ secrets.PORT }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY_CONTENT }}
+        script: sudo mv /tmp/index.html /var/www/html/index.nginx-debian.html
