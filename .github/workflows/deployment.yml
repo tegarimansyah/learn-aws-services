@@ -18,9 +18,9 @@ jobs:
     - name: copy file to server
       uses: appleboy/scp-action@v0.1.7
       with:
-        host: ${{ secrets.HOST }}
-        port: ${{ secrets.PORT }}
-        username: ${{ secrets.USERNAME }}
+        host: ${{ env.HOST }}
+        port: ${{ env.PORT }}
+        username: ${{ env.USERNAME }}
         key: ${{ secrets.KEY_CONTENT }}
         source: "code/2.cicd/index.html"
         target: /tmp/index.html
