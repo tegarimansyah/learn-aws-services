@@ -23,7 +23,7 @@ jobs:
         username: "ubuntu"
         key: ${{ secrets.KEY_CONTENT }}
         source: "code/2.cicd/index.html"
-        target: /tmp/
+        target: tmp/
 
     - name: copy file to /var/www/html
       uses: appleboy/ssh-action@v1.0.3
@@ -32,4 +32,4 @@ jobs:
         port: "22"
         username: "ubuntu"
         key: ${{ secrets.KEY_CONTENT }}
-        script: sudo mv /tmp/index.html /var/www/html/index.nginx-debian.html
+        script: sudo mv tmp/index.html /var/www/html/index.nginx-debian.html
