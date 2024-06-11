@@ -21,7 +21,7 @@ jobs:
     - name: copy file to server
       uses: appleboy/scp-action@v0.1.7
       with:
-        host: "18.143.107.202"
+        host: "13.229.95.72"
         port: "22"
         username: "ubuntu"
         key: ${{ secrets.KEY_CONTENT }}
